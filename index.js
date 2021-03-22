@@ -3,7 +3,7 @@ const table = document.querySelector('.GeneratedTable');
 fetch("https://api.github.com/users/Bipin-chy/repos")
 .then(res=>res.json()).then(data=>{
     data.map((item)=>{
-        data.sort();
+        
 
         console.log(item);
         
