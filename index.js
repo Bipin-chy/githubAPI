@@ -10,15 +10,15 @@ fetch("https://api.github.com/users/Bipin-chy/repos")
        
         const tableBody = document.createElement('tbody');
         const tableRow = document.createElement('tr');
-//          const urlName = 'https://github.com/Bipin-chy/';
+         const urlName = 'https://bipin-chy.github.io/';
 
 
         tableBody.appendChild(tableRow);
 
         tableRow.innerHTML = `<td>${item.id}</td>
         <td>${item.name}</td>
-        <td><a href="${item.htm_url + '/' + item.name}">${item.htm_url + '/' + item.name}</a></td>
-        <td><a href="${item.htm_url + '/' + item.name + '/'}">${item.name}</a></td>
+        <td><a href="${item.owner.html_url + '/' + item.name}">${item.owner.html_url + '/' + item.name}</a></td>
+        <td><a href="${urlName + item.name + '/'}">${item.name}</a></td>
         `;
         table.appendChild(tableBody);
     })
